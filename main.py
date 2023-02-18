@@ -21,7 +21,19 @@ def find_mismatch(text):
   return "Success"
 
 def main():
-  print(find_mismatch(input()))
+  text = None
+  while not text:
+    mode = input("Enter input mode (F/I): ")
+    if mode == "F":
+      file = input("Enter filename: ")
+      f = open(file, "r")
+      text = f.readline()
+    elif mode == "I":
+      text = input("Enter text: ")
+    else:
+      print("Wrong mode")
+  
+  print(find_mismatch(text))
 
 if __name__ == "__main__":
   main()
