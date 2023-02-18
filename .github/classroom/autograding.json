@@ -59,6 +59,12 @@
       "comparison": "included",
       "timeout": 2,
       "points": 1
+    },
+    {
+        "name": "version_",
+        "setup": "",
+        "run": "python3 -V",
+        "timeout": 2
     }
   ]
 }
